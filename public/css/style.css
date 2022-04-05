@@ -1,0 +1,48 @@
+section {
+  height: 100vh;
+  width: 100%;
+  background-color: #353d48;
+  overflow: hidden;
+}
+
+/* Halaman Home  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: #ffffff;
+}
+
+.home .card {
+  background-color: #86b7b8;
+  color: #ffffff;
+  border-radius: 30px;
+}
+
+.home button {
+  width: 100px;
+  background-color: #9a85fc;
+  color: #ffffff;
+}
+
+/* Halaman 404  */
+.error404 {
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.error404 img {
+  width: 50%;
+}
+
+.error404 .btn {
+  width: 100px;
+  background-color: #9a85fc;
+  color: #ffffff;
+}

@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const qr = require("qrcode");
+const qrcode = require("qrcode");
 
 // Halaman Utama
 router.get("/", (req, res) => {
@@ -14,7 +14,7 @@ router.post("/qrcode", (req, res) => {
   // If the input is null return "Empty Data" error
   if (url.length === 0) res.send("Empty Data!");
 
-  qr.toDataURL(url, (err, src) => {
+  qrcode.toDataURL(url, (err, src) => {
     if (err) res.send("Error occured");
 
     // Let us return the QR code image as our response and set it to be the source used in the webpage

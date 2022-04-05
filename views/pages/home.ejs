@@ -6,22 +6,19 @@
   <body>
     <!-- AWAL INPUT  -->
 
-    <main id="main" class="main">
-      <section class="section">
-        <div class="row">
-          <div class="text-center">
-            <span style="font-size: 30px; font-weight: lighter">QR CODE</span><span style="font-size: 30px; font-weight: bolder; color: #0d5a71"> GENERATOR</span>
-            <hr />
-          </div>
-        </div>
-        <div class="row d-flex justify-content-center">
-          <div class="col-10">
-            <div class="card p-5" style="height: 390px">
-              <p>Masukkan URL kemudian klik Generate!</p>
-              <form class="form" action="/qrcode" method="POST">
-                <input name="url" class="form-control form-control-lg" placeholder="URL or Text" type="text" required />
-                <div class="d-flex justify-content-center"><button type="submit" class="btn btn-success mt-3" style="width: 200px">Generate</button></div>
-              </form>
+    <main>
+      <section class="home">
+        <div class="container-fluid h-100">
+          <div class="row h-100">
+            <div class="col-6 mx-auto my-auto">
+              <h1 class="text-center mb-3">QR CODE GENERATOR</h1>
+              <div class="card p-5">
+                <p>Insert URL, then click Generate!</p>
+                <form class="form" action="/qrcode" method="POST">
+                  <input name="url" class="form-control form-control-lg" placeholder="URL or Text" type="text" required />
+                  <div class="d-flex justify-content-center"><button type="submit" class="btn mt-3">Generate</button></div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
