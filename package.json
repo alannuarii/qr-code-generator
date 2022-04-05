@@ -1,0 +1,24 @@
+{
+  "name": "qr-code-generator",
+  "version": "1.0.0",
+  "description": "Aplikasi QR Code Generator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alannuarii/qr-code-generator.git"
+  },
+  "author": "Alan Nuari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alannuarii/qr-code-generator/issues"
+  },
+  "homepage": "https://github.com/alannuarii/qr-code-generator#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "qrcode": "^1.5.0"
+  }
+}
