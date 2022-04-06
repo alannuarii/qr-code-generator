@@ -8,20 +8,47 @@ router.get("/", (req, res) => {
 });
 
 // Proses Pembuatan QR Code
-router.post("/qrcode", (req, res) => {
+router.post("/qrcode", async (req, res) => {
   const url = req.body.url;
 
-  // If the input is null return "Empty Data" error
-  if (url.length === 0) res.send("Empty Data!");
+  if (url.length === 0) {
+    res.send("Empty Data!");
+  }
 
-  qrcode.toDataURL(url, (err, src) => {
-    if (err) res.send("Error occured");
-
-    // Let us return the QR code image as our response and set it to be the source used in the webpage
+  try {
+    const src = await qrcode.toDataURL(url, {
+      errorCorrectionLevel: req.body.errorCorrectionLevel,
+      margin: req.body.margin,
+      color: {
+        dark: req.body.dark,
+        light: req.body.light,
+      },
+    });
+    const image = await qrcode.toFile("./public/img/yourqrcode.png", url, {
+      errorCorrectionLevel: req.body.errorCorrectionLevel,
+      margin: req.body.margin,
+      width: req.body.width,
+      color: {
+        dark: req.body.dark,
+        light: req.body.light,
+      },
+    });
     res.render("pages/qrcode", {
       src,
     });
-  });
+  } catch (error) {
+    if (error) {
+      res.send("Error occured");
+    }
+  }
+
+  // qrcode.toDataURL(url, (err, src) => {
+  //   if (err) res.send("Error occured");
+
+  //   res.render("pages/qrcode", {
+  //     src,
+  //   });
+  // });
 });
 
 // Halaman Error 404

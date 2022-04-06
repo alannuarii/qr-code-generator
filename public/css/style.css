@@ -29,6 +29,18 @@ a {
   color: #ffffff;
 }
 
+/* Halaman QR Code  */
+.qrcode .btn {
+  width: 100px;
+  background-color: #9a85fc;
+  color: #ffffff;
+}
+
+.qrcode .card {
+  background-color: #86b7b8;
+  border-radius: 30px;
+}
+
 /* Halaman 404  */
 .error404 {
   height: 100vh;
